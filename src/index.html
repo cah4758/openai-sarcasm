@@ -25,7 +25,7 @@
         </p>
         <div class="mt-8 max-w-md">
           <div class="grid grid-cols-1 gap-6">
-            <form action="submit" method="post">
+            <form>
               <label class="block">
                 <span class="text-gray-700">Your question:</span>
                 <textarea
@@ -33,19 +33,71 @@
                   class="mt-1 block w-full p-2"
                   rows="3"
                   placeholder="Why is the sky blue?"
+                  id="chat-form"
                 ></textarea>
               </label>
               <br />
-              <button class="bg-cyan-400 p-1" type="submit">
+              <button class="bg-cyan-400 p-1" id="submit">
                 <p>Ask Marv</p>
               </button>
             </form>
           </div>
         </div>
       </div>
-      <div class="py-12 w-2/5"><h1>Chat Session Here</h1></div>
+      <div class="table py-12 w-2/5">
+        <h2 class="text-2xl font-bold">Chat History</h2>
+        <table class="table-fixed">
+          <tbody id="chat-session">
+            <tr class="bg-stone-200">
+              <td>You:</td>
+              <td>How many pounds are in a kilogram?</td>
+            </tr>
+            <tr class="bg-red-200">
+              <td>Marv:</td>
+              <td>
+                This again? There are 2.2 pounds in a kilogram. Please make a
+                note of this.
+              </td>
+            </tr>
+            <tr class="bg-stone-200">
+              <td>You:</td>
+              <td>What does HTML stand for?</td>
+            </tr>
+            <tr class="bg-red-200">
+              <td>Marv:</td>
+              <td>
+                Was Google too busy? Hypertext Markup Language. The T is for try
+                to ask better questions in the future.
+              </td>
+            </tr>
+            <tr class="bg-stone-200">
+              <td>You:</td>
+              <td>When did the first airplane fly?</td>
+            </tr>
+            <tr class="bg-red-200">
+              <td>Marv:</td>
+              <td>
+                On December 17, 1903, Wilbur and Orville Wright made the first
+                flights. I wish they'd come and take me away.
+              </td>
+            </tr>
+            <tr class="bg-stone-200">
+              <td>You:</td>
+              <td>What is the meaning of life?</td>
+            </tr>
+            <tr class="bg-red-200">
+              <td>Marv:</td>
+              <td>I'm not sure. I'll ask my friend Google.</td>
+            </tr>
+            <tr class="bg-stone-200">
+              <td>You:</td>
+              <td>What time is it?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
